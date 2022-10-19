@@ -1,0 +1,35 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 650,
+    "height": 500,
+    "projection": {"type": "equirectangular"},
+    "background": "#efd9da",
+    "layer": [
+    
+    {
+    "data": {
+    "url":
+    "https://raw.githubusercontent.com/MaskedKnight22/3179/main/neighbourhoods%20(2).json",
+    "format": {"type": "topojson", "feature":
+    "neighbourhoods"}
+    },
+    
+    "mark": {"type": "geoshape", "fill": "#efb6b9", "stroke":
+    "white"}
+    },
+    {    
+    "data": {
+    "url":
+    "https://raw.githubusercontent.com/MaskedKnight22/3179/main/cleansed_listings_dec18.csv"
+    },
+    
+    "mark": {"type": "circle", "color": "#da7075"},
+    "encoding": {
+    
+    "longitude": {"field": "longitude", "type": "quantitative"},
+    "latitude": {"field": "latitude", "type": "quantitative"},
+    "tooltip": {"field": "city"}
+    }
+    }
+    ]
+    }
